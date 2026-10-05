@@ -42,7 +42,7 @@ class Query(Base):
     temper_group = Column(String)
     predicted_uts = Column(String)
     predicted_ys = Column(String)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=datetime.now)
 
 
 engine = create_engine(os.environ["DATABASE"], echo=False)
